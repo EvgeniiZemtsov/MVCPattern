@@ -8,11 +8,9 @@ public class EditUserView implements View {
 
     @Override
     public void refresh(ModelData modelData) {
-//        if (modelData.isDisplayDeletedUserList()) {
             System.out.println("User to be edited:");
             System.out.println("\t" + modelData.getActiveUser());
             System.out.println("===================================================");
-//        }
     }
 
     @Override

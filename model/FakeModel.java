@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FakeModel implements Model {
+
+    private ModelData modelData = new ModelData();
+
     @Override
     public void changeUserData(String name, long id, int level) {
         throw new UnsupportedOperationException();
@@ -25,8 +28,6 @@ public class FakeModel implements Model {
     public void loadDeletedUsers() {
         throw new UnsupportedOperationException();
     }
-
-    private ModelData modelData = new ModelData();
 
     @Override
     public ModelData getModelData() {

@@ -5,9 +5,8 @@ import com.javarush.task.task36.task3608.bean.User;
 import com.javarush.task.task36.task3608.controller.Controller;
 import com.javarush.task.task36.task3608.model.ModelData;
 
-public class UsersView implements View{
+public class UsersView implements View {
     private Controller controller;
-    
 
     @Override
     public void refresh(ModelData modelData) {
@@ -15,10 +14,9 @@ public class UsersView implements View{
             System.out.println("All users:");
         else
             System.out.println("All deleted users:");
-            for (User user : modelData.getUsers())
-                System.out.println("\t" + user);
-            System.out.println("===================================================");
-
+        for (User user : modelData.getUsers())
+            System.out.println("\t" + user);
+        System.out.println("===================================================");
     }
 
     @Override
@@ -29,6 +27,7 @@ public class UsersView implements View{
     public void fireEventShowAllUsers() {
         controller.onShowAllUsers();
     }
+
     public void fireEventShowDeletedUsers() {
         controller.onShowAllDeletedUsers();
     }
@@ -36,6 +35,5 @@ public class UsersView implements View{
     public void fireEventOpenUserEditForm(long id) {
         controller.onOpenUserEditForm(id);
     }
-
 
 }
